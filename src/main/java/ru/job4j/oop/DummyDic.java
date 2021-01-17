@@ -10,5 +10,3 @@ public class DummyDic {
         System.out.println(rsl);
     }
 }
-
-
