@@ -1,5 +1,12 @@
 package ru.job4j.oop.encapsulation;
 
+/**
+ * Encapsulation rules.
+ * All fields - private!
+ * Classes - public or private.
+ * Methods - public or private.
+ * If default or protected - replace public!
+ */
 public class Config {
     private String name;
     private int position;
