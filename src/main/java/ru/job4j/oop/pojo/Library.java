@@ -1,12 +1,22 @@
 package ru.job4j.oop.pojo;
 
 public class Library {
+    public static int indexOfNull(Book[] books) {
+        int rsl = -1;
+        for (int i = 0; i < books.length; i++) {
+            if (books[i] == null) {
+                rsl =  i;
+                break;
+            }
+        }
+        return rsl;
+    }
     public static void main(String[] args) {
         Book java = new Book("Head start Java", 320);
         Book code = new Book("Clean code", 540);
         Book kotlin = new Book("Kotlin tutorial", 610);
         Book python = new Book("Python tutorial", 520);
-        Book[] books = new Book[4];
+        Book[] books = new Book[6];
         books[0] = java;
         books[1] = code;
         books[2] = kotlin;
