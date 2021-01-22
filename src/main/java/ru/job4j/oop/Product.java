@@ -8,6 +8,12 @@ public final class Product {
         this.name = name;
         this.price = price;
     }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getName() {
+        return name;
+    }
 
     public int price() {
         return price - discount();
