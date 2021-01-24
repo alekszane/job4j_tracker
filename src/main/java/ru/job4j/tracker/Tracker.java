@@ -35,10 +35,10 @@ public class Tracker {
         for (int i = 0; i < size; i++) {
             Item item = items[i];
             if (item.getName().equals(key)) {
-                equalsName[size] = item;
+                equalsName[count] = item;
                 count++;
             }
         }
-        return Arrays.copyOf(equalsName, size);
+        return Arrays.copyOf(equalsName, count);
     }
 }
