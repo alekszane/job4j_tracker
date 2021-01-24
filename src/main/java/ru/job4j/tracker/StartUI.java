@@ -12,5 +12,8 @@ public class StartUI {
        for (int i = 0; i < it.length; i ++){
            System.out.println(i);
        }
+       Item item1 = new Item(5, "Replace Item");
+       tracker.replace(1, item1);
+        System.out.println(tracker.findById(1).getName());
     }
 }
