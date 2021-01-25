@@ -14,5 +14,8 @@ public class StartUI {
        Item item1 = new Item(5, "Replace Item");
        tracker.replace(1, item1);
         System.out.println(tracker.findById(1).getName());
+        System.out.println(" - - - - - - - - - ");
+        Item item2 = new Item(4, "Show Item toString" );
+        System.out.println(item2);
     }
 }
