@@ -13,12 +13,8 @@ public class Matches {
             System.out.println(player + " введите число от 1 до 3:");
             int matches = Integer.parseInt(input.nextLine());
             turn = !turn;
-            if (matches == 1) {
-                count -= 1;
-            } else if (matches == 2) {
-                count -= 2;
-            } else if (matches == 3) {
-                count -= 3;
+            if (matches >= 1 && matches < 4) {
+                count -= matches;
             }
             System.out.println(count + " Спичек осталось на столе");
         }
