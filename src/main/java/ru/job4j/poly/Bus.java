@@ -17,7 +17,7 @@ public class Bus implements Transport {
 
     @Override
     public double price(double gallons) {
-        double costGalon = 5.5;
-        return gallons * costGalon;
+        double costGallon = 5.5;
+        return gallons * costGallon;
     }
 }
