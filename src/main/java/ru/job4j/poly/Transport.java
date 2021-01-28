@@ -4,5 +4,4 @@ public interface Transport {
     void drive();
     void passengers(int num);
     double price(double gas);
-
 }
