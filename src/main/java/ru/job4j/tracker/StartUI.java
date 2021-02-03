@@ -59,10 +59,12 @@ public class StartUI {
         System.out.println("=== Find items by name  ====");
         String name = input.askStr("Enter name item for find: ");
         Item[] equalItems = tracker.findByName(name);
-        if (equalItems != null) {
+        if (equalItems.length != 0) {
             for (Item it: equalItems) {
                 System.out.println(it.toString());
             }
+        } else {
+            System.out.println("Заявки с таким id не найдены");
         }
     }
 
