@@ -8,12 +8,13 @@ import static org.junit.Assert.*;
 
 
 public class StartUITest {
+
 @Test
     public void testCreateItem() {
     String[] answers = {"Fix PC"};
     Input input = new StubInput(answers);
     Tracker tracker = new Tracker();
-    StartUI.createItem(input, tracker);
+    //StartUI.(input, tracker);
     Item created = tracker.findAll()[0];
     Item expected = new Item("Fix PC");
     assertThat(created.getName(), is(expected.getName()));
@@ -25,10 +26,10 @@ public class StartUITest {
         Item item = new Item("new item");
         tracker.add(item);
         String[] answers = {
-                String.valueOf(item.getId()), /* id сохраненной заявки в объект tracker. */
+                String.valueOf(item.getId()),  //* id сохраненной заявки в объект tracker. *//*
                 "replaced item"
         };
-        StartUI.replaceItem(new StubInput(answers), tracker);
+        //StartUI.replaceItem(new StubInput(answers), tracker);
         Item replaced = tracker.findById(item.getId());
         assertThat(replaced.getName(), is("replaced item"));
     }
@@ -39,7 +40,7 @@ public class StartUITest {
         Item item = new Item("new item");
         tracker.add(item);
         String[] answers = { String.valueOf(item.getId()) };
-        StartUI.deleteItem(new StubInput(answers), tracker);
+        //StartUI.deleteItem(new StubInput(answers), tracker);
         Item deleted = tracker.findById(item.getId());
         assertThat(deleted, is(nullValue()));
     }
