@@ -1,6 +1,12 @@
 package ru.job4j.tracker;
 
 public class ShowAllAction implements UserAction {
+private final Output out;
+
+    public ShowAllAction(Output out) {
+        this.out = out;
+    }
+
 
     @Override
     public String name() {
@@ -12,10 +18,10 @@ public class ShowAllAction implements UserAction {
         Item[] items = tracker.findAll();
         if (items.length > 0) {
             for (Item it: items) {
-                System.out.println(it.toString());
+                out.println(it.toString());
             }
         } else {
-            System.out.println("Заявки с таким не найдены");
+            out.println("Заявки не найдены");
         }
         return true;
     }

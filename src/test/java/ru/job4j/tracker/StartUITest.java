@@ -2,7 +2,6 @@ package ru.job4j.tracker;
 
 import org.junit.Test;
 
-import static org.hamcrest.Matchers.nullValue;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
@@ -49,7 +48,7 @@ public class StartUITest {
         UserAction[] actions = {
                 new CreateAction(out),
                 new CreateAction(out),
-                new DeleteItemAction(),
+                new DeleteItemAction(out),
                 new ExitAction()
         };
         new StartUI(out).init(in, tracker, actions);
@@ -110,7 +109,7 @@ public class StartUITest {
         Tracker tracker = new Tracker();
         UserAction[] actions = {
                 new CreateAction(out),
-                new ShowAllAction(),
+                new ShowAllAction(out),
                 new ExitAction()
         };
         new StartUI(out).init(in, tracker, actions);
