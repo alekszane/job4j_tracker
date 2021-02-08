@@ -31,7 +31,7 @@ public class StartUITest {
         Tracker tracker = new Tracker();
         UserAction[] actions = {
                 new CreateAction(out),
-                new ReplaceItemAction(),
+                new ReplaceItemAction(out),
                 new ExitAction()
         };
         new StartUI(out).init(in, tracker, actions);
@@ -93,6 +93,7 @@ public class StartUITest {
                         "0. === Create a new Item ====" + System.lineSeparator() +
                         "1. === Find item by Id  ====" + System.lineSeparator() +
                         "2. === Exit Program ===" + System.lineSeparator() +
+                        tracker.findById(1) + System.lineSeparator() +
                         "Menu." + System.lineSeparator() +
                         "0. === Create a new Item ====" + System.lineSeparator() +
                         "1. === Find item by Id  ====" + System.lineSeparator() +
@@ -121,6 +122,7 @@ public class StartUITest {
                 "0. === Create a new Item ====" + System.lineSeparator() +
                 "1. === Show all items  ====" + System.lineSeparator() +
                 "2. === Exit Program ===" + System.lineSeparator() +
+                tracker.findById(1) + System.lineSeparator() +
                 "Menu." + System.lineSeparator() +
                 "0. === Create a new Item ====" + System.lineSeparator() +
                 "1. === Show all items  ====" + System.lineSeparator() +
@@ -149,6 +151,7 @@ public class StartUITest {
                 "0. === Create a new Item ====" + System.lineSeparator() +
                 "1. === Find items by name  ====" + System.lineSeparator() +
                 "2. === Exit Program ===" + System.lineSeparator() +
+                tracker.findById(1) + System.lineSeparator() +
                 "Menu." + System.lineSeparator() +
                 "0. === Create a new Item ====" + System.lineSeparator() +
                 "1. === Find items by name  ====" + System.lineSeparator() +
