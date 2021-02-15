@@ -16,7 +16,7 @@ public class UserStore {
     }
 
     public static boolean validate(User user) throws UserInvalidException {
-        if (!user.isValid() && user.getUsername().length() <= 3) {
+        if (!user.isValid() || user.getUsername().length() <= 3) {
             throw new UserInvalidException("User not validate");
         }
         return true;
@@ -24,7 +24,7 @@ public class UserStore {
 
     public static void main(String[] args) {
         User[] users = {
-                new User("Petr Arsentev", false)
+                new User("Petr Arsentev", true)
         };
         try {
             User user = findUser(users, "Petr Arsentev");
