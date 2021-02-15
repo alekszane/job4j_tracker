@@ -32,6 +32,9 @@ public class StartUI {
         Output output = new ConsoleOutput();
         Input input = new ValidateInput(output, new ConsoleInput());
         Tracker tracker = new Tracker();
+        Log4File log = Log4File.getInstance();
+        log.add("add new Item");
+        log.save();
         UserAction[] actions = {
                 new CreateAction(output),
                 new ShowAllAction(output),
