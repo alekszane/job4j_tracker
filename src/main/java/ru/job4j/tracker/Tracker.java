@@ -3,9 +3,20 @@ package ru.job4j.tracker;
 import java.util.Arrays;
 
 public class Tracker {
+    private static Tracker TRACKER = null;
     private final Item[] items = new Item[100];
     private int ids = 1;
     private int size = 0;
+
+    private Tracker() {
+    }
+
+    public static Tracker getTRACKER() {
+        if (TRACKER == null) {
+            TRACKER = new Tracker();
+        }
+        return TRACKER;
+    }
 
     public Item add(Item item) {
         item.setId(ids++);
