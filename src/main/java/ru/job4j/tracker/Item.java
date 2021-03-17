@@ -4,8 +4,8 @@ public class Item {
     private int id;
     private String name;
 
-    public Item() {
-    }
+    /*public Item() {
+    }*/
 
     public Item(int id) {
         this.id = id;
