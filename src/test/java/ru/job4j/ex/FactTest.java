@@ -7,11 +7,11 @@ import static org.hamcrest.core.Is.is;
 
 
 public class FactTest {
-    @Test(expected = IllegalArgumentException.class)
+    /*@Test(expected = IllegalArgumentException.class)
     public void whenThrowIllegalArgumentException() {
         int rsl = Fact.calc(0);
         assertThat(rsl, is(1));
-    }
+    }*/
 
     @Test()
     public void whenFactIs10() {
